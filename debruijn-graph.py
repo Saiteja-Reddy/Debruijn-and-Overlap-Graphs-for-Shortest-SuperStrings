@@ -72,7 +72,7 @@ def run_path(reads, k):
 	while flag:
 	    flag=0
 	    joinmers.append(kmers[now])
-	    for j in range(len(kmers)):
+	    for j in range(len(kmers))[::-1]:
 	        if(graphf[now][j] > 0):
 	            graphf[now][j] -= 1
 	            flag = 1
